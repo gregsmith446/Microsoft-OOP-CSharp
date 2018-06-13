@@ -36,24 +36,22 @@ namespace Mod1_Lab2
         public int Year { get; set; }
         public int Mileage { get; set; }
 
-        // Adding Constructor1 
+        // Adding a Constructor 
         // This constructor instantiates a Car() object while only having the car's color and year information available
         public Car(string color, int year)
         {
             this.Color = color;
             this.Year = year;
-
             // Every time the constructor runs, increment "instances"
             instances++;
         }
 
-        //Adding Constructor2
+        //Adding another Constructor
         // This constructor instantiates a Car() object while only having the car's year and mileage information available
         public Car(int year, int mileage)
         {
             this.Year = year;
             this.Mileage = mileage;
-
             // Every time the constructor runs, increment "instances"
             instances++;
         }
@@ -61,13 +59,14 @@ namespace Mod1_Lab2
         // Creates integer variable called "instances" and assigns value to 0
         private static int instances = 0;
 
+        //
         public Car()
         {
             // Every time the constructor runs, increment "instances"
             instances++;
         }
 
-        // Declare static member
+        //
         public static int CountCars()
         {
             return instances;
